@@ -1,0 +1,15 @@
+<div *ngFor="let tempWord of words">
+
+<p  *ngIf="tempWord.withTones == ''; else useWithTones">
+    <a routerLink="/words/{{ tempWord.id }}">
+        {{ tempWord.igboWord}}: {{ tempWord.englishWord }}
+    </a>
+</p>
+
+<ng-template #useWithTones>
+    <a routerLink="/words/{{tempWord.id}}">
+        {{ tempWord.withTones}}: {{ tempWord.englishWord }}
+    </a>
+</ng-template>
+
+</div>

@@ -1,0 +1,13 @@
+<form>
+<div class="mb-3">
+    <input #myInput type="text" class="form-control" id="myInput" placeholder="{{ msg }}"
+    (keyup.enter)="doSearch(myInput.value)" />
+</div>
+<div class="form-check form-switch">
+  <input #langInput (click)="changeLanguage(langInput.checked)" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+  <label class="form-check-label" for="flexSwitchCheckChecked"> {{ lang }}</label>
+</div>
+<div class="col-12">
+    <button (click)="doSearch(myInput.value)" type="submit" class="btn btn-primary">{{ btnMsg }}</button>
+  </div>
+</form>
